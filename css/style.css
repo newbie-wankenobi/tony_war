@@ -22,6 +22,44 @@ h1 {
 
 
 }
+
+.drawn-player1 {
+  border: 2px solid;
+  height: 88px;
+  width: 64px;
+  position: relative;
+  display: inline-block;
+  left: 180px;
+}
+.drawn-player2 {
+  border: 2px solid;
+  height: 88px;
+  width:  64px;
+  position:  relative;
+  display:  inline-block;
+  left:  180px;
+}
+.war-player1 {
+  border:  2px dotted;
+  height:  88px;
+  width:  64px;
+  position:  relative;
+  display:  inline-block;
+  left:  380px;
+}
+.war-player2 {
+  border:  2px dotted;
+  height:  88px;
+  width:  64px;
+  position:  relative;
+  display:  inline-block;
+  left:  380px;
+
+/*section {
+  border: 2px solid;
+  height: 200px;
+  width: 200px;
+}*/
 ul {
   list-style: none;
 }
@@ -35,16 +73,18 @@ ul li:last-child{
 }
 
 #statbox {
-
 border:  1px solid black;
 color:  white;
 background-color: black;
 width: 150px;
 height: 100px;
 margin:  0 auto;
-opacity: .2;
+opacity: .6;
+position: absolute;
 }
 
 footer {
   text-align: center;
+  height: 150px;
+  left:  200px;
 }

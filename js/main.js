@@ -98,6 +98,10 @@ cardsInDeck[49] = "Clubs4";
 cardsInDeck[50] = "Clubs3";
 cardsInDeck[51] = "Clubs2";
 
+// Place drawn cards on board in center
+
+// Post score in statistics box real-time
+
 // When players draw, high card wins and both cards return to winner's deck
 
 // When draw is a tie, each player draws 4 more cards
