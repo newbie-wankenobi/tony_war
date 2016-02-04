@@ -1,13 +1,11 @@
 console.log("I declare war!");
 
-// Current turn holder
-var currentTurn;
-
 // Player constructor function
 var Player = function(id) {
   this.name = "Player " + (id + 1);
   this.id   = "p" + id;
   this.hand = [];
+  this.inPlay;
 }
 
 // List of Players
@@ -25,17 +23,12 @@ function shuffleArray(array) {
       array[i] = array [j];
       array[j] = temp;
   }
-  console.log(i);
-  return array;
 }
 
 // Shuffle sound everytime
 
 // Cards dealt to each player 26 a piece
 
-$('#deal').click(function() {
-    dealCard(randomCard());
-})
 
 var deck = [
   'd02', 'd03', 'd04', 'd05', 'd06', 'd07', 'd08', 'd09', 'd10', 'dJ', 'dQ', 'dK', 'dA',
@@ -44,6 +37,9 @@ var deck = [
   'h02', 'h03', 'h04', 'h05', 'h06', 'h07', 'h08', 'h09', 'h10', 'hJ', 'hQ', 'hK', 'hA'
 ];
 
+$('#deal').click(function() {
+    dealCards(deck);
+})
 
 
 
@@ -79,6 +75,19 @@ function removeCard(c) {
   numberOfCardsInDeck --;
 }
 // Place drawn cards on board in center
+function playCards() {
+  // for (var i = 0; i < cards.length; i++)
+  //   if (i % 2 === 0) {
+  //     players[0].hand.pop();
+  //   } else {
+  //     players[1].hand.pop();
+  //   }
+  players[0].inPlay = players[0].hand.shift();
+  players[1].inPlay = players[1].hand.shift();
+}
+
+$('.drawn-' + players[1].id).addClass('card' + players[1].inPlay);
+
 
 // Post score in statistics box real-time
 
