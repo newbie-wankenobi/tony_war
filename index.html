@@ -6,6 +6,7 @@
   <title></title>
   <link rel="stylesheet" href="./css/card_style/cardstarter.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <body>
 
@@ -15,46 +16,43 @@
   </header>
 
   <main>
-    <input type="button" value="Deal Card" id="deal"/>
+    <button id="deal">Deal Card</button>
     <ul>
       <li>
         <h3>Player1</h3>
 
-    <div class="player1 card back-blue shadow">
+        <div class="p0 card back-blue shadow"></div>
 
-    </div>
-    <div class="drawn-player1"></div>
-    <div class="war-player1"></div>
-    <div class="war-player1"></div>
-    <div class="war-player1"></div>
-    <div class="war-player1"></div>
+        <div class="drawn-p0"></div>
+
+        <div class="war-p0"></div>
+        <div class="war-p0"></div>
+        <div class="war-p0"></div>
+        <div class="war-p0"></div>
       </li>
-
-    <div class="game-board">
-        <h1></h1>
-    </div>
       <li>
-          <h3>Player2</h3>
-    <div class="player2 card back-blue shadow">
-
-    </div>
-    <div class="drawn-player2"></div>
-    <div class="war-player2"></div>
-    <div class="war-player2"></div>
-    <div class="war-player2"></div>
-    <div class="war-player2"></div>
-    <div id="statbox"></div>
-
-        </li>
+        <div class="game-board"></div>
+      </li>
+      <li>
+        <h3>Player2</h3>
+        <div class="p1 card back-blue shadow"></div>
+        <div class="drawn-p1"></div>
+        <div class="war-p1"></div>
+        <div class="war-p1"></div>
+        <div class="war-p1"></div>
+        <div class="war-p1"></div>
+      </li>
     </ul>
   </main>
 
   <footer>
-    <div>
-      Statistics
+    <div class="stat-div">
+      <h4>Statistics</h4>
+      <div id="statbox"></div>
     </div>
   </footer>
 
+<script src="./js/main.js"></script>
 
 </body>
 </html>

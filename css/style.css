@@ -3,6 +3,7 @@ body {
   width: 100%;
   background-color: #277714;
   display:  inline-block;
+  margin: 0 auto;
 }
 
 header {
@@ -13,17 +14,17 @@ h1 {
   text-align: center;
 }
 
-.player1 {
+/*.p0 {
 
 
 }
 
-.player2 {
+.p1 {
 
 
-}
+}*/
 
-.drawn-player1 {
+.drawn-p0 {
   border: 2px solid;
   height: 88px;
   width: 64px;
@@ -31,7 +32,8 @@ h1 {
   display: inline-block;
   left: 180px;
 }
-.drawn-player2 {
+
+.drawn-p1 {
   border: 2px solid;
   height: 88px;
   width:  64px;
@@ -39,7 +41,7 @@ h1 {
   display:  inline-block;
   left:  180px;
 }
-.war-player1 {
+.war-p0 {
   border:  2px dotted;
   height:  88px;
   width:  64px;
@@ -47,24 +49,24 @@ h1 {
   display:  inline-block;
   left:  380px;
 }
-.war-player2 {
+.war-p1 {
   border:  2px dotted;
   height:  88px;
   width:  64px;
   position:  relative;
   display:  inline-block;
   left:  380px;
-
+}
 /*section {
   border: 2px solid;
   height: 200px;
   width: 200px;
 }*/
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
-ul li:last-child{
+ul li:last-child {
   padding-top: 75px;
 }
 
@@ -73,18 +75,23 @@ ul li:last-child{
 }
 
 #statbox {
-border:  1px solid black;
-color:  white;
-background-color: black;
-width: 150px;
-height: 100px;
-margin:  0 auto;
-opacity: .6;
-position: absolute;
+  border:  1px solid black;
+  color:  white;
+  background-color: black;
+  width: 150px;
+  height: 100px;
+  margin:  0 auto;
+  opacity: .2;
 }
 
 footer {
+  margin: 0 auto;
   text-align: center;
   height: 150px;
-  left:  200px;
+  text-align: center;
+}
+
+.stat-div {
+  display: block;
+  margin: 0 auto;
 }
