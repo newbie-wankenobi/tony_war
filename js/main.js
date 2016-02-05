@@ -52,7 +52,10 @@ function dealCards(cards) {
       players[1].hand.push(cards[i]);
     }
   }
+  playCards();
+
 }
+
   // players[0]
 
 //   if (numberOfCardsInDeck == 0) return
@@ -84,9 +87,56 @@ function playCards() {
   //   }
   players[0].inPlay = players[0].hand.shift();
   players[1].inPlay = players[1].hand.shift();
+  $('.drawn-' + players[0].id).addClass('card ' + players[0].inPlay);
+   $('.drawn-' + players[1].id).addClass('card ' + players[1].inPlay);
+
+   winner(players[0].inPlay, players[1].inPlay);
 }
 
-$('.drawn-' + players[1].id).addClass('card' + players[1].inPlay);
+function winner(card1, card2) {
+  var winner;
+  console.log(card1, card2);
+  card1 = card1.split('').slice(1).join('');
+  card2 = card2.split('').slice(1).join('');
+  console.log(card1, card2);
+  card1 === "J" ? card1 = 11 : card1;
+  card1 === "Q" ? card1 = 12 : card1;
+  card1 === "K" ? card1 = 13 : card1;
+  card1 === "A" ? card1 = 14 : card1;
+  card2 === "J" ? card2 = 11 : card2;
+  card2 === "Q" ? card2 = 12 : card2;
+  card2 === "K" ? card2 = 13 : card2;
+  card2 === "A" ? card2 = 14 : card2;
+  card1 = parseInt(card1);
+  card2 = parseInt(card2);
+  console.log (card1, card2);
+  if (card1 > card2) {
+    winner = "Player1"
+    $("#player1-win").removeAttr("style");
+    setTimeout(function() {
+      $("#player1-win").hide();
+    },2000);
+    console.log(winner + " Wins")
+  } else if (card1 < card2){
+    winner = "Player2"
+    $("#player2-win").removeAttr("style");
+    setTimeout(function() {
+      $("#player2-win").hide();
+    },2000);
+    console.log(winner + " Wins")
+  } else {
+    winner = "Draw"
+    $("#draw").removeAttr("style");
+    setTimeout(function() {
+      $("#draw").hide();
+    },2000);
+    console.log(winner);
+  }
+}
+
+
+
+
 
 
 // Post score in statistics box real-time
