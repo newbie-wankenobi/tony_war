@@ -70,12 +70,7 @@ function removeCard(c) {
 }
 // Place drawn cards on board in center
 function playCards() {
-  // for (var i = 0; i < cards.length; i++)
-  //   if (i % 2 === 0) {
-  //     players[0].hand.pop();
-  //   } else {
-  //     players[1].hand.pop();
-  //   }
+
   players[0].inPlay = players[0].hand.shift();
   players[1].inPlay = players[1].hand.shift();
   $('.drawn-' + players[0].id).addClass('card ' + players[0].inPlay);
@@ -107,14 +102,14 @@ function winner(card1, card2) {
     setTimeout(function() {
       $("#player1-win").hide();
     },2000);
-    console.log(winner + " Wins");
+    console.log(winner + "Wins");
   } else if (card1 < card2){
     winner = "Player2";
     $("#player2-win").removeAttr("style");
     setTimeout(function() {
       $("#player2-win").hide();
     },2000);
-    console.log(winner + " Wins");
+    console.log(winner + "Wins");
   } else {
     winner = "Draw";
     $("#draw").removeAttr("style");
