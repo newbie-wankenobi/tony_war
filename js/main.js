@@ -56,16 +56,7 @@ function dealCards(cards) {
 
 }
 
-  // players[0]
 
-//   if (numberOfCardsInDeck == 0) return
-// false;
-/*  var img = document.createElement("img");
-    img.src =
-    document.body.appendChild(img);
-    removeCard(i); */
-
-// dealCard(deck)
 
 function randomCard() {
   return Math.floor(Math.random() * numberOfCardsInDeck);
@@ -111,21 +102,21 @@ function winner(card1, card2) {
   card2 = parseInt(card2);
   console.log (card1, card2);
   if (card1 > card2) {
-    winner = "Player1"
+    winner = "Player1";
     $("#player1-win").removeAttr("style");
     setTimeout(function() {
       $("#player1-win").hide();
     },2000);
-    console.log(winner + " Wins")
+    console.log(winner + " Wins");
   } else if (card1 < card2){
-    winner = "Player2"
+    winner = "Player2";
     $("#player2-win").removeAttr("style");
     setTimeout(function() {
       $("#player2-win").hide();
     },2000);
-    console.log(winner + " Wins")
+    console.log(winner + " Wins");
   } else {
-    winner = "Draw"
+    winner = "Draw";
     $("#draw").removeAttr("style");
     setTimeout(function() {
       $("#draw").hide();
