@@ -6,22 +6,23 @@ var Player = function(id) {
   this.id   = "p" + id;
   this.hand = [];
   this.inPlay;
+  this.score = 0;
 }
 
-// List of Players
-var players = [new Player(0), new Player(1)];
 
 // Model the Board
 var board = [null, null];
 
+var players;
+
 // Shuffle the deck
 
-function shuffleArray(array) {
-  for (var i = array.length - 1; i > 0; i--) {
+function shuffleDeck() {
+  for (var i = deck.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i +1));
-      var temp = array[i];
-      array[i] = array [j];
-      array[j] = temp;
+      var temp = deck[i];
+      deck[i] = deck [j];
+      deck[j] = temp;
   }
 }
 
@@ -38,25 +39,34 @@ var deck = [
 ];
 
 $('#deal').click(function() {
-    dealCards(deck);
+    battle();
+    if (players[0].hand.length === 0) {
+      $("#deal").hide();
+      displayWinner();
+    }
 })
 
-
-
-function dealCards(cards) {
-  shuffleArray(cards);
-  for (var i = 0; i < cards.length; i++) {
-    if (i % 2 === 0) {
-      players[0].hand.push(cards[i]);
-    } else {
-      players[1].hand.push(cards[i]);
-    }
+function displayWinner() {
+  var winner;
+  if (players[0].score > players[1].score) {
+    winner = "Congratulations Player 1";
+  } else if (players[0].score < players[1].score) {
+    winner = "Congratulations Player 2";
+  } else {
+    winner = "It's a Draw";
   }
-  playCards();
-
+  alert(winner);
 }
 
-
+function dealCards() {
+  for (var i = 0; i < deck.length; i++) {
+    if (i % 2 === 0) {
+      players[0].hand.push(deck[i]);
+    } else {
+      players[1].hand.push(deck[i]);
+    }
+  }
+}
 
 function randomCard() {
   return Math.floor(Math.random() * numberOfCardsInDeck);
@@ -69,14 +79,18 @@ function removeCard(c) {
   numberOfCardsInDeck --;
 }
 // Place drawn cards on board in center
-function playCards() {
-
+function battle() {
   players[0].inPlay = players[0].hand.shift();
   players[1].inPlay = players[1].hand.shift();
-  $('.drawn-' + players[0].id).addClass('card ' + players[0].inPlay);
-   $('.drawn-' + players[1].id).addClass('card ' + players[1].inPlay);
-
-   winner(players[0].inPlay, players[1].inPlay);
+  if (players[0].hand.length < 25) {
+    var lastClass = $('.drawn-' + players[0].id).attr('class').split(' ').pop();
+    $('.drawn-' + players[0].id).removeClass(lastClass);
+    lastClass = $('.drawn-' + players[1].id).attr('class').split(' ').pop();
+    $('.drawn-' + players[1].id).removeClass(lastClass);
+  }
+  $('.drawn-' + players[0].id).addClass(players[0].inPlay);
+  $('.drawn-' + players[1].id).addClass(players[1].inPlay);
+  winner(players[0].inPlay, players[1].inPlay);
 }
 
 function winner(card1, card2) {
@@ -97,22 +111,24 @@ function winner(card1, card2) {
   card2 = parseInt(card2);
   console.log (card1, card2);
   if (card1 > card2) {
+    players[0].score += 2;
     winner = "Player1";
-    $("#player1-win").removeAttr("style");
+    $("#player1-win").show();
     setTimeout(function() {
       $("#player1-win").hide();
     },2000);
     console.log(winner + "Wins");
   } else if (card1 < card2){
+    players[1].score += 2;
     winner = "Player2";
-    $("#player2-win").removeAttr("style");
+    $("#player2-win").show();
     setTimeout(function() {
       $("#player2-win").hide();
     },2000);
     console.log(winner + "Wins");
   } else {
     winner = "Draw";
-    $("#draw").removeAttr("style");
+    $("#draw").show();
     setTimeout(function() {
       $("#draw").hide();
     },2000);
@@ -120,7 +136,13 @@ function winner(card1, card2) {
   }
 }
 
+function playGame () {
+  players = [new Player(0), new Player(1)];
+  shuffleDeck();
+  dealCards();
+}
 
+playGame();
 
 
 

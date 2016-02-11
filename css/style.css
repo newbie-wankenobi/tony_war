@@ -2,8 +2,12 @@ body {
   height: 100%;
   width: 100%;
   background-color: #277714;
-  display:  inline-block;
-  margin: 0 auto;
+/*  display:  inline-block;
+*/  /*margin: 0 auto;*/
+}
+
+main {
+  /*margin: 0 auto;*/
 }
 
 header {
@@ -12,22 +16,41 @@ header {
 
 h1 {
   text-align: center;
+  font-family: Papyrus, fantasy;
+  font-size: 75px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
 }
 
-/*.p0 {
+ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.p0 {
+  text-align: center;
 
 }
 
 .p1 {
 
 
-}*/
+}
 
 .drawn-p0 {
   border: 2px solid;
-  height: 88px;
-  width: 64px;
+ /* height: 88px;
+  width: 64px;*/
   position: relative;
   display: inline-block;
   left: 180px;
@@ -35,13 +58,13 @@ h1 {
 
 .drawn-p1 {
   border: 2px solid;
-  height: 88px;
-  width:  64px;
+  /*height: 88px;
+  width:  64px;*/
   position:  relative;
   display:  inline-block;
   left:  180px;
 }
-.war-p0 {
+/*.war-p0 {
   border:  2px dotted;
   height:  88px;
   width:  64px;
@@ -56,7 +79,7 @@ h1 {
   position:  relative;
   display:  inline-block;
   left:  380px;
-}
+}*/
 /*section {
   border: 2px solid;
   height: 200px;
@@ -72,6 +95,7 @@ ul li:last-child {
 
 .game-board {
   text-emphasis: center;
+  margin:  0 auto;
 }
 
 #statbox {
@@ -94,4 +118,7 @@ footer {
 .stat-div {
   display: block;
   margin: 0 auto;
+}
+
+.back-blue {
 }
