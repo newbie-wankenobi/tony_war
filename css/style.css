@@ -18,12 +18,13 @@ header {
   height: 65px;
   font-size: 40px;
   font-family: Papyrus, fantasy;
+  cursor: pointer;
 }
 
 h1 {
   text-align: center;
   font-family: Papyrus, fantasy;
-  font-size: 75px;
+  font-size: 100px;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
@@ -32,21 +33,27 @@ h1 {
 
 #player1 {
   font-family: Papyrus, fantasy;
+  font-size: 30px;
+  text-align: center;
   color: red;
   display: inline-block;
   margin: 0 auto;
   position: absolute;
   padding: 60px;
+  padding-left: 35px;
 }
 
 #player2 {
   font-family: Papyrus, fantasy;
+  font-size: 30px;
+  text-align: center;
   color: blue;
   display: inline-block;
   margin: 0 auto;
   margin: 0 auto;
   position: absolute;
   padding: 60px;
+  padding-left: 35px;
 }
 
 ul {

@@ -3,7 +3,6 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0.125em;
-  cursor: pointer;
   /* Set the card's dimensions, and size it relative to
      it's font size. */
   font-size: inherit;
