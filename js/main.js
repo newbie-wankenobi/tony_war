@@ -1,6 +1,5 @@
 console.log("I declare war!");
 
-// Player constructor function
 var Player = function(id) {
   this.name = "Player " + (id + 1);
   this.id   = "p" + id;
@@ -9,13 +8,9 @@ var Player = function(id) {
   this.score = 0;
 }
 
-
-// Model the Board
 var board = [null, null];
 
 var players;
-
-// Shuffle the deck
 
 function shuffleDeck() {
   for (var i = deck.length - 1; i > 0; i--) {
@@ -25,10 +20,6 @@ function shuffleDeck() {
       deck[j] = temp;
   }
 }
-
-// Shuffle sound everytime
-
-// Cards dealt to each player 26 a piece
 
 
 var deck = [
@@ -79,7 +70,7 @@ function removeCard(c) {
   }
   numberOfCardsInDeck --;
 }
-// Place drawn cards on board in center
+
 function battle() {
   players[0].inPlay = players[0].hand.shift();
   players[1].inPlay = players[1].hand.shift();
@@ -115,24 +106,24 @@ function winner(card1, card2) {
     players[0].score += 2;
     winner = "Player1";
     $("#player1-win").show();
-    // setTimeout(function() {
-    //   $("#player1-win").hide();
-    // },2000);
+    setTimeout(function() {
+      $("#player1-win").hide();
+    },2000);
     console.log(winner + "Wins");
   } else if (card1 < card2){
     players[1].score += 2;
     winner = "Player2";
     $("#player2-win").show();
-    // setTimeout(function() {
-    //   $("#player2-win").hide();
-    // },2000);
+    setTimeout(function() {
+      $("#player2-win").hide();
+    },2000);
     console.log(winner + "Wins");
   } else {
     winner = "Draw";
     $("#draw").show();
-    // setTimeout(function() {
-    //   $("#draw").hide();
-    // },2000);
+    setTimeout(function() {
+      $("#draw").hide();
+    },2000);
     console.log(winner);
   }
 }
@@ -148,21 +139,7 @@ playGame();
 
 
 
-// Post score in statistics box real-time
 
-// When players draw, high card wins and both cards return to winner's deck
-
-// When draw is a tie, each player draws 4 more cards
-
-// High card of 4th drawn wins for player and all cards return to winner's pile
-
-// Automatically draws 4 more in case of tie (repeats automatically until win)
-
-// Player with 52 cards wins
-
-// Note appears announcing winner
-
-// Do you want to play again?
 
 
 

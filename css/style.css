@@ -17,12 +17,10 @@ header {
 #deal {
   color: red;
   background-color: blue;
-  margin: 0 auto;
   width: 150px;
   height: 65px;
   font-size: 40px;
-  font-family: Fontin;
-  position: center;
+  font-family: Papyrus, fantasy;
 }
 
 h1 {
@@ -37,6 +35,7 @@ h1 {
 
 #player1 {
 
+  font-family: Papyrus, fantasy;
   color: red;
   display: inline-block;
   margin: 0 auto;
@@ -46,6 +45,7 @@ h1 {
 
 #player2 {
 
+  font-family: Papyrus, fantasy;
   color: blue;
   display: inline-block;
   margin: 0 auto;
@@ -120,9 +120,7 @@ li {
   width: 200px;
 }*/
 
-ul li:last-child {
-  padding-top: 75px;
-}
+
 
 .game-board {
   text-emphasis: center;
@@ -132,11 +130,10 @@ ul li:last-child {
 #statbox {
   border:  1px solid black;
   color:  white;
-  background-color: black;
+  background-color: white;
   width: 150px;
   height: 100px;
   margin:  0 auto;
-  opacity: .2;
 }
 
 footer {
@@ -154,4 +151,19 @@ footer {
 .back-blue {
 }
 
+
+#player1-win {
+  color: red;
+  margin-top: 45px;
+}
+
+#player2-win {
+  color: blue;
+  margin-top: 45px;
+}
+
+#draw {
+  color: green;
+  margin-top: 45px;
+}
 
