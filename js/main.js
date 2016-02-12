@@ -56,6 +56,7 @@ function displayWinner() {
     winner = "It's a Draw";
   }
   alert(winner);
+  location.reload();
 }
 
 function dealCards() {
@@ -114,24 +115,24 @@ function winner(card1, card2) {
     players[0].score += 2;
     winner = "Player1";
     $("#player1-win").show();
-    setTimeout(function() {
-      $("#player1-win").hide();
-    },2000);
+    // setTimeout(function() {
+    //   $("#player1-win").hide();
+    // },2000);
     console.log(winner + "Wins");
   } else if (card1 < card2){
     players[1].score += 2;
     winner = "Player2";
     $("#player2-win").show();
-    setTimeout(function() {
-      $("#player2-win").hide();
-    },2000);
+    // setTimeout(function() {
+    //   $("#player2-win").hide();
+    // },2000);
     console.log(winner + "Wins");
   } else {
     winner = "Draw";
     $("#draw").show();
-    setTimeout(function() {
-      $("#draw").hide();
-    },2000);
+    // setTimeout(function() {
+    //   $("#draw").hide();
+    // },2000);
     console.log(winner);
   }
 }
