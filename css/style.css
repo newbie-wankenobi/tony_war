@@ -14,6 +14,17 @@ header {
   margin: 0 auto;
 }
 
+#deal {
+  color: red;
+  background-color: blue;
+  margin: 0 auto;
+  width: 150px;
+  height: 65px;
+  font-size: 40px;
+  font-family: Fontin;
+  position: center;
+}
+
 h1 {
   text-align: center;
   font-family: Papyrus, fantasy;
