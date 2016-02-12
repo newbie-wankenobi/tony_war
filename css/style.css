@@ -24,26 +24,40 @@ h1 {
   line-height: 26.4px;
 }
 
+#player1 {
+
+  color: red;
+}
+
+#player2 {
+
+  color: blue;
+}
+
 ul {
+  width: 500px;
   text-align: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style-type: none;
+  list-style-position:inside;
 }
 
 li {
   margin: 0;
   padding: 0;
+  list-style-position:inside;
 }
 
 .p0 {
   text-align: center;
-
+  margin-left: -175px;
 }
 
 .p1 {
-
+  text-align: center;
+  margin-left: -175px;
 
 }
 
@@ -85,9 +99,6 @@ li {
   height: 200px;
   width: 200px;
 }*/
-ul {
-  list-style-type: none;
-}
 
 ul li:last-child {
   padding-top: 75px;
@@ -122,3 +133,5 @@ footer {
 
 .back-blue {
 }
+
+
