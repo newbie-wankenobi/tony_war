@@ -27,11 +27,20 @@ h1 {
 #player1 {
 
   color: red;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  padding: 60px;
 }
 
 #player2 {
 
   color: blue;
+  display: inline-block;
+  margin: 0 auto;
+  margin: 0 auto;
+  position: absolute;
+  padding: 60px;
 }
 
 ul {
