@@ -108,7 +108,7 @@ li {
   color:  white;
   background-color: white;
   width: 150px;
-  height: 100px;
+  height: 70px;
   margin:  0 auto;
 }
 
@@ -129,17 +129,17 @@ footer {
 
 #player1-win {
   color: red;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 #player2-win {
   color: blue;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 #draw {
   color: #277714;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 h4 {

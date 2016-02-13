@@ -21,6 +21,7 @@ function shuffleDeck() {
   }
 }
 
+
 var deck = [
   'd02', 'd03', 'd04', 'd05', 'd06', 'd07', 'd08', 'd09', 'd10', 'dJ', 'dQ', 'dK', 'dA',
   'c02', 'c03', 'c04', 'c05', 'c06', 'c07', 'c08', 'c09', 'c10', 'cJ', 'cQ', 'cK', 'cA',
@@ -81,10 +82,10 @@ function battle() {
   }
   $('.drawn-' + players[0].id).addClass(players[0].inPlay);
   $('.drawn-' + players[1].id).addClass(players[1].inPlay);
-  winner(players[0].inPlay, players[1].inPlay);
+  getWinner(players[0].inPlay, players[1].inPlay);
 }
 
-function winner(card1, card2) {
+function getWinner(card1, card2) {
   var winner;
   console.log(card1, card2);
   card1 = card1.split('').slice(1).join('');
@@ -106,7 +107,7 @@ function winner(card1, card2) {
     winner = "Player1";
     $("#player1-win").show();
     setTimeout(function() {
-      $("#player1-win").hide();
+     $("#player1-win").hide();
     },2000);
     console.log(winner + "Wins");
   } else if (card1 < card2){
@@ -114,14 +115,14 @@ function winner(card1, card2) {
     winner = "Player2";
     $("#player2-win").show();
     setTimeout(function() {
-      $("#player2-win").hide();
+    $("#player2-win").hide();
     },2000);
     console.log(winner + "Wins");
   } else {
     winner = "Draw";
     $("#draw").show();
     setTimeout(function() {
-      $("#draw").hide();
+     $("#draw").hide();
     },2000);
     console.log(winner);
   }
