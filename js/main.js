@@ -12,6 +12,9 @@ var board = [null, null];
 
 var players;
 
+var $body = $('body');
+
+
 function shuffleDeck() {
   for (var i = deck.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i +1));
@@ -37,6 +40,7 @@ $('#deal').click(function() {
     }
 })
 
+
 function displayWinner() {
   var winner;
   if (players[0].score > players[1].score) {
@@ -46,7 +50,8 @@ function displayWinner() {
   } else {
     winner = "It's a Draw";
   }
-  alert(winner);
+  $body.append('<div id="winstat"></div>');
+  $('#winstat').html(winner + players[0].score + players[1].score);
   location.reload();
 }
 
@@ -127,6 +132,7 @@ function getWinner(card1, card2) {
     console.log(winner);
   }
 }
+
 
 function playGame () {
   players = [new Player(0), new Player(1)];

@@ -127,6 +127,18 @@ footer {
 .back-blue {
 }
 
+#winstat {
+display: block;
+color: white;
+background-color: blue;
+width: 200px;
+height: 90px;
+margin: 0 auto;
+border: 1px solid black;
+font-family: Papyrus, fantasy;
+font-size: 50px;
+}
+
 #player1-win {
   color: red;
   margin-top: 25px;
